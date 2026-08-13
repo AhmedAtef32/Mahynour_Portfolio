@@ -1,0 +1,17 @@
+.hero-grid{
+  background-image: linear-gradient(to right, transparent 0, transparent calc(25% - 0.5px), rgba(33, 30, 29, 0.30) 25%, transparent calc(25% + 0.5px), transparent calc(50% - 0.5px), rgba(33, 30, 29, 0.30) 50%, transparent calc(50% + 0.5px), transparent calc(75% - 0.5px), rgba(33, 30, 29, 0.30) 75%, transparent calc(75% + 0.5px))
+}
+.complexity-grid {
+  background-image:
+    linear-gradient(
+      rgba(33, 30, 29, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(33, 30, 29, 0.1) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+}

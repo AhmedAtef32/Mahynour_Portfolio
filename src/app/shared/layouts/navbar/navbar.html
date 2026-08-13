@@ -1,0 +1,131 @@
+<nav class="w-full bg-surface py-4 border-b border-border fixed top-0 left-0 right-0  z-[999]">
+  <div class="container px-2 md:px-8 mx-auto flex items-center justify-between">
+
+    <!-- Brand / Logo Section -->
+    <a
+      routerLink="/"
+      aria-label="Mahynour Sammany -الصفحة الرئيسية"
+      class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-prbg-primary rounded-sm cursor-pointer"
+    >
+      <span
+        class="flex items-center justify-center w-8 h-8 bg-primary text-white font-medium text-sm transition-transform group-hover:scale-105"
+        aria-hidden="true"
+      >
+        M
+      </span>
+
+      <span class="text-base font-semibold tracking-tight">
+        Mahynour Sammany
+      </span>
+    </a>
+
+    <!-- Navigation Menu -->
+    <div aria-label="Main Navigation">
+
+      <ul
+        #menu
+        class="
+          absolute top-[120%]
+          w-[95%]
+          left-[50%]
+          -translate-x-1/2
+          h-[0px]
+          bg-surface
+          overflow-hidden
+          md:w-full
+          md:h-full
+          md:border-none
+          md:p-0
+          md:-translate-0
+          md:static
+          md:flex
+          md:items-center
+          gap-8
+          transition-[height , padding]
+          duration-300
+        "
+        [class.p-4]="menuOpen()"
+      >
+
+        <li class="mb-4 md:mb-0">
+          <a
+            routerLink="/work"
+            class="text-sm text-muted hover:text-primary transition-colors focus:outline-none focus:underline cursor-pointer"
+          >
+            Work
+          </a>
+        </li>
+
+        <li class="mb-4 md:mb-0">
+          <a
+            routerLink="/thinking"
+            class="text-sm text-muted hover:text-primary transition-colors focus:outline-none focus:underline cursor-pointer"
+          >
+            Thinking
+          </a>
+        </li>
+
+        <li class="mb-4 md:mb-0">
+          <a
+            routerLink="/about"
+            class="text-sm text-muted hover:text-primary transition-colors focus:outline-none focus:underline cursor-pointer"
+          >
+            About
+          </a>
+        </li>
+
+        <li class="mb-4 md:mb-0">
+          <a
+            routerLink="/contact"
+            class="text-sm text-muted hover:text-primary transition-colors focus:outline-none focus:underline cursor-pointer"
+          >
+            Contact
+          </a>
+        </li>
+
+        <li class="">
+          <a
+            routerLink="/contact"
+            class="inline-flex w-full justify-center items-center gap-1.5 bg-primary text-white text-sm font-medium px-4 py-4 md:py-2 hover:bg-[#54222d] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-prbg-primary cursor-pointer"
+          >
+            <span>Let's talk</span>
+
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 17L17 7M17 7H7M17 7V17"
+              ></path>
+            </svg>
+          </a>
+        </li>
+
+      </ul>
+
+      <button
+        class="cursor-pointer md:hidden"
+        (click)="toggleMenu()"
+      >
+      @if (menuOpen()) {
+        <i
+          class="pi pi-times"
+          style="font-size: 18px;"
+        ></i>
+      }@else {
+        <i
+          class="pi pi-bars"
+          style="font-size: 18px;"
+        ></i>
+      }
+      </button>
+
+    </div>
+  </div>
+</nav>

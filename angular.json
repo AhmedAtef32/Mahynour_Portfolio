@@ -3,11 +3,11 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "52435dc9-d20e-4de5-9509-f2c7acb00088"
+    "analytics": "0aba0cdf-cd40-4587-b6d8-99e973a9ac71"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "MahyPortfolio": {
+    "MahynourPortfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -65,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "MahyPortfolio:build:production"
+              "buildTarget": "MahynourPortfolio:build:production"
             },
             "development": {
-              "buildTarget": "MahyPortfolio:build:development"
+              "buildTarget": "MahynourPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"

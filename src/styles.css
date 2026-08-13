@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@openng/icons/openng-icons.css";
 
 
 /* Tailwind theme */
@@ -12,4 +13,10 @@
   --color-border: #d5d0c8;
 
   --font-sans: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-surface);
 }
