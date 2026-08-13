@@ -1,0 +1,161 @@
+<section class="pt-20 pb-16 bg-[#EBE7E0]">
+  <div class="container px-4 md:px-8 mx-auto">
+
+    <!-- Header Section -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-16"
+    >
+      <div class="md:col-span-3">
+        <span
+          class="text-muted font-mono text-xs tracking-wider uppercase px-2.5 py-1"
+        >
+          02 / How I think
+        </span>
+      </div>
+
+      <div class="md:col-span-9 flex flex-col space-y-6">
+        <h2
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-neutral-900 tracking-tight leading-[1.08] max-w-4xl"
+        >
+          Good design isn't a collection of pretty screens.
+        </h2>
+
+        <p
+          class="text-[30px] text-primary font-Instrument max-w-2xl font-normal leading-relaxed"
+        >
+          It's a series of decisions made for a reason.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch"
+    >
+
+      <!-- Left Column -->
+      <div
+        class="lg:col-span-5 flex flex-col border-t border-border"
+      >
+
+        @for (
+          card of howIThinkContent;
+          track card.id;
+          let index = $index
+        ) {
+
+          <button
+            type="button"
+            (click)="selectedId.set(card.id)"
+            class="flex items-center justify-between py-5 border-b border-border text-left w-full group cursor-pointer hover:translate-x-1.5 transition-all duration-200"
+          >
+
+            <!-- Left Side -->
+            <div class="flex items-center gap-3">
+
+              <!-- Indicator -->
+              <span
+                class="w-2.5 h-2.5 rounded-full inline-block transition-all duration-200"
+                [class.bg-primary]="selectedId() === card.id"
+                [class.border]="selectedId() !== card.id"
+                [class.border-neutral-400]="selectedId() !== card.id"
+              ></span>
+
+              <!-- Number + Title -->
+              <div>
+
+                <span
+                  class="block font-mono text-[10px] uppercase tracking-widest transition-colors"
+                  [class.text-primary]="selectedId() === card.id"
+                  [class.text-muted]="selectedId() !== card.id"
+                >
+                  0{{ index + 1 }}
+                </span>
+
+                <span
+                  class="text-lg font-bold transition-colors"
+                  [class.text-primary]="selectedId() === card.id"
+                  [class.text-neutral-800]="selectedId() !== card.id"
+                >
+                  {{ card.title }}
+                </span>
+
+              </div>
+            </div>
+
+            <!-- Arrow -->
+            <svg
+              class="w-4 h-4 transition-all duration-200"
+              [class.text-primary]="selectedId() === card.id"
+              [class.text-neutral-800]="selectedId() !== card.id"
+              [class.translate-x-1]="selectedId() === card.id"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+
+          </button>
+        }
+
+      </div>
+
+      <!-- Right Column -->
+      <div
+        class="lg:col-span-7 border border-[#d8d2c5] p-6 sm:p-10 flex flex-col justify-between shadow-sm"
+      >
+
+        <!-- Top Content -->
+        <div>
+
+          <!-- Meta -->
+          <div
+            class="flex items-center justify-between font-mono text-xs text-muted tracking-widest uppercase mb-10"
+          >
+            <span>
+              A WORKING PRINCIPLE
+            </span>
+
+            <span>
+              0{{ selectedCard()?.id }} / 05
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h3
+            class="text-4xl sm:text-5xl md:text-6xl font-semibold text-neutral-900 tracking-tight mb-6"
+          >
+            {{ selectedCard()?.title }}
+          </h3>
+
+          <!-- Description -->
+          <p
+            class="text-base sm:text-lg text-muted max-w-xl font-normal leading-relaxed"
+          >
+            {{ selectedCard()?.description }}
+          </p>
+
+        </div>
+
+        <!-- Footer -->
+        <div
+          class="pt-12 mt-12 border-t border-[#d8d2c5]"
+        >
+          <p
+            class="font-mono text-xs sm:text-sm text-primary tracking-widest uppercase"
+          >
+            {{ selectedCard()?.footerDes }}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
