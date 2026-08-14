@@ -24,3 +24,7 @@ body {
 .font-Instrument {
   font-family: "Instrument Serif", serif;
 }
+::selection{
+  color: white;
+  background-color: var(--color-primary);
+}
