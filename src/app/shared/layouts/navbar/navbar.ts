@@ -1,5 +1,5 @@
-import { Component, ElementRef, signal, viewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, ElementRef, inject, signal, viewChild } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +8,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+
+  private router = inject(Router);
+  private _activatedRoute = inject(ActivatedRoute);
+
   menuOpen = signal(false);
 
   menu = viewChild.required<ElementRef<HTMLUListElement>>('menu');

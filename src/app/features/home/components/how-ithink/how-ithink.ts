@@ -1,9 +1,10 @@
 import { Component, computed, signal, Signal, WritableSignal } from '@angular/core';
 import { IHowIThinkCard } from '../../../interfaces/home/IHowIThink';
-
+import { AvatarModule } from '@openng/optimus-ui/avatar';
+import { AnimateOnScroll } from '@openng/optimus-ui/animateonscroll';
 @Component({
   selector: 'app-how-ithink',
-  imports: [],
+  imports: [AvatarModule,AnimateOnScroll],
   templateUrl: './how-ithink.html',
   styleUrl: './how-ithink.css',
 })

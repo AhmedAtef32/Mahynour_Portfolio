@@ -1,154 +1,142 @@
 <section
+  id="hero-section"
   class="min-h-screen bg-surface pt-28 pb-16 px-4 md:px-8 relative overflow-hidden flex items-center hero-grid border-b border-border"
 >
   <div class="container px-4 md:px-8 mx-auto relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-      <!-- Left Column: Text & Content -->
-    <div class="lg:col-span-7 flex flex-col items-start space-y-6 md:space-y-8">
-
-  <div
-    class="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs tracking-widest uppercase font-mono text-muted"
-  >
-    <span
-      class="w-6 sm:w-8 h-[1px] bg-primary inline-block shrink-0"
-      aria-hidden="true"
-    ></span>
-
-    <span>PRODUCT DESIGNER / EGYPT / 2026</span>
-  </div>
-
-  <!-- Main Heading -->
-  <h1
-    class="text-5xl sm:text-6xl md:text-7xl lg:text-[100px] leading-[1.05] font-semibold text-neutral-900 tracking-tight w-full"
-  >
-    I turn
-
-    <span class="font-serif italic font-normal text-primary">
-      complexity
-    </span>
-
-    into
-
-    clarity.
-  </h1>
-
-  <!-- Subheading -->
-  <p
-    class="text-base sm:text-lg text-muted w-full max-w-xl font-normal leading-relaxed"
-  >
-    Product Designer building thoughtful digital experiences across SaaS,
-    enterprise, mobile, and consumer products — with a business mindset and a
-    systems-thinking approach.
-  </p>
-
-  <!-- Call to Action Buttons -->
-  <div
-    class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto"
-  >
-    <a
-      routerLink="/work"
-      class="inline-flex justify-center items-center gap-2 bg-primary text-white text-sm font-medium px-6 py-3.5 hover:bg-[#54222d] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary cursor-pointer"
-    >
-      <span>View selected work</span>
-
-      <svg
-        class="w-4 h-4 shrink-0"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
+      <div
+        class="lg:col-span-7 flex flex-col items-start space-y-6 md:space-y-8"
+        pAnimateOnScroll
+        [once]="true"
+        enterClass="animate-fadeindown animate-duration-500"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M14 5l7 7m0 0l-7 7m7-7H3"
-        ></path>
-      </svg>
-    </a>
+        <!-- Tagline -->
+        <div
+          class="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs tracking-widest uppercase font-mono text-muted"
+        >
+          <span
+            class="w-6 sm:w-8 h-[1px] bg-primary inline-block shrink-0"
+            aria-hidden="true"
+          ></span>
 
-    <a
-      routerLink="/thinking"
-      class="inline-flex justify-center items-center gap-1.5 text-neutral-900 text-sm font-medium px-4 py-3.5 hover:text-primary transition-colors border-b border-neutral-900 hover:border-primary focus:outline-none cursor-pointer"
-    >
-      <span>How I think</span>
+          <span>PRODUCT DESIGNER / EGYPT / 2026</span>
+        </div>
 
-      <svg
-        class="w-3.5 h-3.5 shrink-0"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
+        <!-- Main Heading -->
+        <h1
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-[100px] leading-[1.05] font-semibold text-neutral-900 tracking-tight w-full"
+        >
+          I turn
+
+          <span class="font-serif italic font-normal text-primary"> complexity </span>
+
+          into clarity.
+        </h1>
+
+        <!-- Subheading -->
+        <p class="text-base sm:text-lg text-muted w-full max-w-xl font-normal leading-relaxed">
+          Product Designer building thoughtful digital experiences across SaaS, enterprise, mobile,
+          and consumer products — with a business mindset and a systems-thinking approach.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto"
+        >
+          <a
+            routerLink="/work"
+            class="inline-flex justify-center items-center gap-2 bg-primary text-white text-sm font-medium px-6 py-3.5 hover:bg-[#54222d] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary cursor-pointer"
+          >
+            <span>View selected work</span>
+
+            <svg
+              class="w-4 h-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+
+          <a
+            routerLink="/thinking"
+            class="inline-flex justify-center items-center gap-1.5 text-neutral-900 text-sm font-medium px-4 py-3.5 hover:text-primary transition-colors border-b border-neutral-900 hover:border-primary focus:outline-none cursor-pointer"
+          >
+            <span>How I think</span>
+
+            <svg
+              class="w-3.5 h-3.5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Quick Info -->
+        <div
+          class="mt-4 sm:mt-8 md:mt-12 pt-6 sm:pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full lg:w-[80%]"
+        >
+          <!-- Focus -->
+          <div class="flex flex-col space-y-1.5 sm:space-y-2">
+            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest text-muted uppercase">
+              FOCUS
+            </span>
+
+            <h3 class="text-sm sm:text-base font-semibold text-neutral-900 tracking-tight">
+              Product thinking
+            </h3>
+          </div>
+
+          <!-- Approach -->
+          <div class="flex flex-col space-y-1.5 sm:space-y-2">
+            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest text-muted uppercase">
+              APPROACH
+            </span>
+
+            <h3 class="text-sm sm:text-base font-semibold text-neutral-900 tracking-tight">
+              Systems, not screens
+            </h3>
+          </div>
+
+          <!-- Currently -->
+          <div class="flex flex-col space-y-1.5 sm:space-y-2 sm:col-span-2 lg:col-span-1">
+            <span class="text-[10px] sm:text-[11px] font-mono tracking-widest text-muted uppercase">
+              CURRENTLY
+            </span>
+
+            <h3
+              class="text-sm sm:text-base font-semibold text-neutral-900 tracking-tight leading-snug"
+            >
+              Making messy things
+              <br class="hidden sm:inline" />
+              make sense
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="lg:col-span-5 flex justify-center lg:justify-end relative min-h-[460px]"
+        pAnimateOnScroll
+        [once]="true"
+        enterClass="animate-fadeindown animate-duration-500"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        ></path>
-      </svg>
-    </a>
-  </div>
-
-  <!-- Quick Info -->
-  <div
-    class="mt-4 sm:mt-8 md:mt-12 pt-6 sm:pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full lg:w-[80%]"
-  >
-
-    <!-- 1. FOCUS -->
-    <div class="flex flex-col space-y-1.5 sm:space-y-2">
-      <span
-        class="text-[10px] sm:text-[11px] font-mono tracking-widest text-muted uppercase"
-      >
-        FOCUS
-      </span>
-
-      <h3
-        class="text-sm sm:text-base font-semibold text-neutral-900 tracking-tight"
-      >
-        Product thinking
-      </h3>
-    </div>
-
-    <!-- 2. APPROACH -->
-    <div class="flex flex-col space-y-1.5 sm:space-y-2">
-      <span
-        class="text-[10px] sm:text-[11px] font-mono tracking-widest text-muted uppercase"
-      >
-        APPROACH
-      </span>
-
-      <h3
-        class="text-sm sm:text-base font-semibold text-neutral-900 tracking-tight"
-      >
-        Systems, not screens
-      </h3>
-    </div>
-
-    <!-- 3. CURRENTLY -->
-    <div
-      class="flex flex-col space-y-1.5 sm:space-y-2 sm:col-span-2 lg:col-span-1"
-    >
-      <span
-        class="text-[10px] sm:text-[11px] font-mono tracking-widest text-muted uppercase"
-      >
-        CURRENTLY
-      </span>
-
-      <h3
-        class="text-sm sm:text-base font-semibold text-neutral-900 tracking-tight leading-snug"
-      >
-        Making messy things
-        <br class="hidden sm:inline" />
-        make sense
-      </h3>
-    </div>
-
-  </div>
-</div>
-      <!-- Right Column: Interactive / Diagram Card -->
-      <div class="lg:col-span-5 flex justify-center lg:justify-end relative min-h-[460px]">
-        <!-- Main Card Wrapper -->
         <div>
           <div
             class="w-full complexity-grid border border-border bg-[#EBE7E0] p-4 sm:p-6 md:p-8 relative shadow-sm flex flex-col justify-between overflow-hidden"
@@ -163,8 +151,9 @@
             <!-- Interactive Node Graph -->
             <app-interactiv-node-graphe [resolve]="resolve()"></app-interactiv-node-graphe>
 
-            <!-- Bottom Status Legend & Button -->
+            <!-- Bottom Status -->
             <div class="flex justify-between items-center flex-wrap relative z-30 pt-4 gap-2">
+              <!-- Button -->
               <div>
                 <button
                   type="button"
@@ -175,6 +164,7 @@
                 </button>
               </div>
 
+              <!-- Status -->
               <div
                 class="flex justify-end items-center gap-2 font-mono text-[11px] sm:text-[12px] text-muted tracking-wider uppercase"
               >
@@ -186,9 +176,11 @@
               </div>
             </div>
 
-            <!-- ================= OVERLAY ================= -->
+            <!-- Overlay -->
             <app-card-overlay [resolve]="resolve()"></app-card-overlay>
           </div>
+
+          <!-- Note -->
           <p class="text-muted text-[14px] mt-2">
             A small visual note on the work: the right interface is often hidden inside the wrong
             question.

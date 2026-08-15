@@ -1,10 +1,14 @@
-<section class="pt-20 pb-16 bg-[#EBE7E0]">
+<section class="pt-20 pb-16 bg-[#EBE7E0] overflow-hidden" id="how-i-think">
   <div class="container px-4 md:px-8 mx-auto">
 
-    <!-- Header Section -->
+    <!-- ================= HEADER ================= -->
     <div
       class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-16"
+      pAnimateOnScroll
+      [once]="true"
+      enterClass="animate-fadeinup animate-duration-200"
     >
+      <!-- Section Label -->
       <div class="md:col-span-3">
         <span
           class="text-muted font-mono text-xs tracking-wider uppercase px-2.5 py-1"
@@ -13,6 +17,7 @@
         </span>
       </div>
 
+      <!-- Header Content -->
       <div class="md:col-span-9 flex flex-col space-y-6">
         <h2
           class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-neutral-900 tracking-tight leading-[1.08] max-w-4xl"
@@ -28,14 +33,18 @@
       </div>
     </div>
 
-    <!-- Main Content -->
+
+    <!-- ================= MAIN CONTENT ================= -->
     <div
       class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch"
     >
 
-      <!-- Left Column -->
+      <!-- ================= LEFT COLUMN ================= -->
       <div
         class="lg:col-span-5 flex flex-col border-t border-border"
+        pAnimateOnScroll
+        [once]="true"
+        enterClass="animate-fadeinleft animate-duration-1000"
       >
 
         @for (
@@ -106,9 +115,13 @@
 
       </div>
 
-      <!-- Right Column -->
+
+      <!-- ================= RIGHT COLUMN ================= -->
       <div
         class="lg:col-span-7 border border-[#d8d2c5] p-6 sm:p-10 flex flex-col justify-between shadow-sm"
+        pAnimateOnScroll
+        [once]="true"
+        enterClass="animate-fadeinright animate-duration-1000"
       >
 
         <!-- Top Content -->
@@ -143,6 +156,7 @@
 
         </div>
 
+
         <!-- Footer -->
         <div
           class="pt-12 mt-12 border-t border-[#d8d2c5]"
@@ -159,4 +173,3 @@
     </div>
   </div>
 </section>
-
